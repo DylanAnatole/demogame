@@ -20,10 +20,16 @@
   <div id="wrap"><canvas id="unity-canvas" tabindex="-1"></canvas></div>
   <div id="loading"><div>Duck Smash</div><div id="bar"><div id="fill"></div></div><div id="lmsg" style="font-weight:600;font-size:14px">Đang tải 0%</div>
     <button id="retry" style="display:none;padding:10px 18px;border:0;border-radius:10px;background:#9a88ee;color:#fff;font-weight:700"
-      onclick="location.reload()">Lâu quá? Chạm để tải lại</button></div>
+      onclick="location.reload()">Lâu quá? Chạm để tải lại</button>
+    <div id="tip" style="font-weight:600;font-size:13px;opacity:.75;max-width:280px;text-align:center"></div></div>
   <div id="warn"></div>
   <script>
     var canvas = document.querySelector("#unity-canvas");
+    (function () {   // a random tip while loading
+      var tips = ["Mẹo: nảy tường rồi phá = điểm x2", "Mẹo: phá 10 món 1 phát → Vịt Bom", "Mẹo: bắn vịt vào vịt để đẩy đi",
+                  "Mẹo: phao bơi trượt đi húc vỡ đồ", "Mẹo: không dùng booster được thêm 25 xu", "Mẹo: ghé bản đồ nhận quà mỗi ngày"];
+      document.querySelector("#tip").textContent = tips[Math.floor(Math.random() * tips.length)];
+    })();
     function banner(msg, type) {
       var d = document.createElement("div"); d.innerHTML = msg;
       d.style = "padding:8px 12px;border-radius:8px;background:" + (type == "error" ? "#ff8a80" : "#fff59d");
@@ -32,9 +38,9 @@
     }
     var buildUrl = "Build";
     var config = {
-      dataUrl: buildUrl + "/5119b42a050f1252901814fceb7dd85e.data.unityweb",
-      frameworkUrl: buildUrl + "/09da862f90b672b5ab3a256123a76304.framework.js.unityweb",
-      codeUrl: buildUrl + "/0eea569e80c37c4156a54a1be6a58c50.wasm.unityweb",
+      dataUrl: buildUrl + "/e163b416f78f337d2b2ed9aa819bb5b5.data.unityweb",
+      frameworkUrl: buildUrl + "/22983e23f1076d96fc3fef5ac4b5ecd2.framework.js.unityweb",
+      codeUrl: buildUrl + "/f287c7b5e2dd462927c98599318386ee.wasm.unityweb",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "DefaultCompany",
       productName: "Duck Smash",
