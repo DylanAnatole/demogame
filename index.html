@@ -27,7 +27,7 @@
     var canvas = document.querySelector("#unity-canvas");
     (function () {   // a random tip while loading
       var tips = ["Mẹo: nảy tường rồi phá = điểm x2", "Mẹo: phá 10 món 1 phát → Vịt Bom", "Mẹo: bắn vịt vào vịt để đẩy đi",
-                  "Mẹo: phao bơi trượt đi húc vỡ đồ", "Mẹo: không dùng booster được thêm 25 xu", "Mẹo: ghé bản đồ nhận quà mỗi ngày"];
+                  "Mẹo: phao bơi trượt đi húc vỡ đồ", "Mẹo: bom tắm nổ dây chuyền", "Mẹo: đổ 1 domino, đổ cả dây"];
       document.querySelector("#tip").textContent = tips[Math.floor(Math.random() * tips.length)];
     })();
     function banner(msg, type) {
@@ -38,9 +38,9 @@
     }
     var buildUrl = "Build";
     var config = {
-      dataUrl: buildUrl + "/e163b416f78f337d2b2ed9aa819bb5b5.data.unityweb",
-      frameworkUrl: buildUrl + "/22983e23f1076d96fc3fef5ac4b5ecd2.framework.js.unityweb",
-      codeUrl: buildUrl + "/f287c7b5e2dd462927c98599318386ee.wasm.unityweb",
+      dataUrl: buildUrl + "/396f946121444de8075fbe2cc0a64cf2.data.unityweb",
+      frameworkUrl: buildUrl + "/0c5d49edd8375c91417bc2e6341c2033.framework.js.unityweb",
+      codeUrl: buildUrl + "/e724bdac4a747ca95dc247f9883ffaf2.wasm.unityweb",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "DefaultCompany",
       productName: "Duck Smash",
