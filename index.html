@@ -10,6 +10,10 @@
     /* keep a 9:16 portrait frame that always fits the window */
     #unity-canvas { width: min(100vw, calc(100vh * 9 / 16)); height: min(100vh, calc(100vw * 16 / 9)); display: block;
       border-radius: 14px; box-shadow: 0 10px 40px rgba(60, 40, 90, .25); background: #fbe6e6; touch-action: none; }
+    /* tall phones (taller than 9:16): fill the whole screen instead of a letterboxed box - the game lays out for any taller shape */
+    @media (max-aspect-ratio: 9/16) {
+      #unity-canvas { width: 100vw; height: 100vh; height: 100dvh; border-radius: 0; box-shadow: none; }
+    }
     #loading { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; color: #5a4a8a; font-weight: 700; }
     #bar { width: 220px; height: 14px; border-radius: 7px; background: #e9d6ee; overflow: hidden; }
     #fill { width: 0; height: 100%; background: #9a88ee; transition: width .2s; }
@@ -80,9 +84,9 @@
     }
     var buildUrl = "Build";
     var config = {
-      dataUrl: buildUrl + "/26e31b202780b130885ffe3ecd305c4e.data.unityweb",
-      frameworkUrl: buildUrl + "/c2e633773b2f0029b2052956bc5fa06c.framework.js.unityweb",
-      codeUrl: buildUrl + "/0f49176d163a9de04c396b213ea5fd69.wasm.unityweb",
+      dataUrl: buildUrl + "/80f80057d35b696f20272ce9d8f6f115.data.unityweb",
+      frameworkUrl: buildUrl + "/56cc5c2dbf7acc9ad44a3d0a295e1923.framework.js.unityweb",
+      codeUrl: buildUrl + "/21aa2837e51cff9a6c083957fcdc7f9d.wasm.unityweb",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "DefaultCompany",
       productName: "Duck Smash",
