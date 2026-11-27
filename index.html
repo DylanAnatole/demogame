@@ -84,9 +84,9 @@
     }
     var buildUrl = "Build";
     var config = {
-      dataUrl: buildUrl + "/e3ff6e9affbe2c0c9068a87e0fc0f803.data.unityweb",
-      frameworkUrl: buildUrl + "/7d9d8813d2654d676c424317868b870e.framework.js.unityweb",
-      codeUrl: buildUrl + "/c7daf198a2a7694d547d7e057bf48e06.wasm.unityweb",
+      dataUrl: buildUrl + "/81363e2d1a84c25a932d671556025c55.data.unityweb",
+      frameworkUrl: buildUrl + "/e50171ebe1174e9b223c507cf87043d9.framework.js.unityweb",
+      codeUrl: buildUrl + "/3abd342b27c2d4401672b8c7b2d0fc90.wasm.unityweb",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "DefaultCompany",
       productName: "Duck Smash",
@@ -112,6 +112,11 @@
         .catch(function (m) { lmsg.textContent = "Lỗi: " + m; document.querySelector("#retry").style.display = "block"; });
     };
     document.body.appendChild(s);
+  </script>
+  <script>
+    // phones: a drag that starts on the game must never turn into page scroll / pull-to-refresh
+    // (pulling a top-row duck UP is exactly the gesture browsers like to steal)
+    document.addEventListener('touchmove', function (e) { e.preventDefault(); }, { passive: false });
   </script>
 </body>
 </html>
